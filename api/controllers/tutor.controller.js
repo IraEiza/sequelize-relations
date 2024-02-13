@@ -2,7 +2,7 @@ const Tutor = require('../models/tutor.model')
 
 const getAllTutors = async (req, res) => {
 	try {
-		const tutors = await Tutor.findAll({paranoid: false})
+		const tutors = await Tutor.findAll( )
 		if (tutors) {
 			return res.status(200).json(tutors)
 		} else {

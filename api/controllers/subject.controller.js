@@ -2,7 +2,7 @@ const Subject = require('../models/subject.model')
 
 const getAllSubjects = async (req, res) => {
 	try {
-		const subjects = await Subject.findAll({paranoid: false})
+		const subjects = await Subject.findAll( )
 		if (subjects) {
 			return res.status(200).json(subjects)
 		} else {

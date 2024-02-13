@@ -2,7 +2,7 @@ const ContactInfo = require('../models/contactInfo.model')
 
 const getAllContactInfos = async (req, res) => {
 	try {
-		const contactInfos = await ContactInfo.findAll({paranoid: false})
+		const contactInfos = await ContactInfo.findAll( )
 		if (contactInfos) {
 			return res.status(200).json(contactInfos)
 		} else {
