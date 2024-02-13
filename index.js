@@ -1,17 +1,14 @@
 const { checkDB, syncModels } = require('./db/index.js')
 const express = require('express')
 const morgan = require("morgan");
-
-const Student = require('./api/models/student.model.js')
-const Tutor = require('./api/models/tutor.model.js')
-const Subject = require('./api/models/subject.model.js')
-const ContactInfo = require('./api/models/contactInfo.model.js')
+const addRelationsToModels = require('./db/relations.js')
 
 const router = require('./api/routes/index.js')
 
 async function dbConnect() {
   try {
     await checkDB()
+    addRelationsToModels()
     await syncModels()
   } catch (error) {
     console.log(error)

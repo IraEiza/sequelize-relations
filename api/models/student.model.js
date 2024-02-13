@@ -8,9 +8,6 @@ const Student = sequelize.define('student', {
   fav_pokemon: {
 		type: DataTypes.STRING
 	}
-},
-{
-  timestamps: false
 })
 
 module.exports = Student

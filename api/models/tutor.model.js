@@ -8,9 +8,6 @@ const Tutor = sequelize.define('tutor', {
   fav_color: {
 		type: DataTypes.STRING
 	}
-},
-{
-  timestamps: false
 })
 
 module.exports = Tutor

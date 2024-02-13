@@ -5,9 +5,6 @@ const Subject = sequelize.define('subject', {
   name: {
     type: DataTypes.STRING
   }
-},
-{
-  timestamps: false
 })
 
 module.exports = Subject

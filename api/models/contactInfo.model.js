@@ -8,9 +8,6 @@ const ContactInfo = sequelize.define('contactInfo', {
   phoneNumber: {
 		type: DataTypes.STRING
 	}
-},
-{
-  timestamps: false
 })
 
 module.exports = ContactInfo

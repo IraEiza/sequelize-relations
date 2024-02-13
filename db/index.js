@@ -6,6 +6,9 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   dialect: 'mysql',
   port: 3306,
   logging: false,
+  define: {
+    timestamps: false
+  }
 });
 
 
@@ -20,7 +23,7 @@ async function checkDB() {
 
 async function syncModels () {
   try {
-    await sequelize.sync()
+    await sequelize.sync({alter: true})
     console.log('Models Synchronized!')
   } catch (error) {
     console.log(error)
